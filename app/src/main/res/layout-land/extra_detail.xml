@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:paddingStart="8dp"
+    android:background="@android:color/white"
+    app:columnCount= "4">
+
+    <TextView
+        android:id="@+id/detail_open_header"
+        android:gravity="center_vertical"
+        android:textColor="@color/material_gray_400"
+        android:textSize="@dimen/extra_detail_header_text_size"
+        android:text="@string/detail_open_header"
+        app:layout_columnWeight="1"
+        app:layout_gravity="fill"
+        app:layout_rowWeight="1"
+        />
+
+    <TextView
+        android:id="@+id/detail_open"
+        android:gravity="center_vertical"
+        style="@style/extra_detail_value_text"
+        android:textSize="@dimen/extra_detail_text_size"
+        android:padding="4dp"
+        app:layout_gravity="fill"
+        tools:text="1200.00"/>
+
+    <TextView
+        android:id="@+id/detail_previous_close_header"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textColor="@color/material_gray_400"
+        android:textSize="@dimen/extra_detail_header_text_size"
+        android:text="@string/detail_previous_close_header"
+        app:layout_columnWeight="1"
+        app:layout_gravity="fill"
+        app:layout_rowWeight="1"/>
+
+    <TextView
+        android:id="@+id/detail_previous_close"
+        android:gravity="center_vertical"
+        style="@style/extra_detail_value_text"
+        android:textSize="@dimen/extra_detail_text_size"
+        android:padding="4dp"
+        app:layout_gravity="fill"
+        tools:text="1000.05"/>
+
+    <TextView
+        android:id="@+id/detail_highest_header"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textColor="@color/material_gray_400"
+        android:textSize="@dimen/extra_detail_header_text_size"
+        android:text="@string/detail_day_high_header"
+        app:layout_gravity="fill"
+        app:layout_rowWeight="1"
+        />
+
+    <TextView
+        android:id="@+id/detail_highest"
+        android:gravity="center_vertical"
+        style="@style/extra_detail_value_text"
+        android:textSize="@dimen/extra_detail_text_size"
+        android:padding="4dp"
+        app:layout_gravity="fill"
+        tools:text="1000.05"/>
+
+    <TextView
+        android:id="@+id/detail_lowest_header"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textColor="@color/material_gray_400"
+        android:textSize="@dimen/extra_detail_header_text_size"
+        android:text="@string/detail_day_low_header"
+        app:layout_gravity="fill"
+        app:layout_rowWeight="1"
+        />
+
+    <TextView
+        android:id="@+id/detail_lowest"
+        android:gravity="center_vertical"
+        style="@style/extra_detail_value_text"
+        android:textSize="@dimen/extra_detail_text_size"
+        android:padding="4dp"
+        app:layout_gravity="fill"
+        tools:text="1000.05"/>
+
+
+
+    <TextView
+        android:id="@+id/detail_bid_header"
+        android:gravity="center_vertical"
+        android:textColor="@color/material_gray_400"
+        android:textSize="@dimen/extra_detail_header_text_size"
+        android:text="@string/detail_bid_header"
+        app:layout_gravity="fill"
+        app:layout_rowWeight="1"
+        />
+
+    <TextView
+        android:id="@+id/detail_bid"
+        android:gravity="center_vertical"
+        style="@style/extra_detail_value_text"
+        android:textSize="@dimen/extra_detail_text_size"
+        android:padding="4dp"
+        app:layout_gravity="fill"
+        tools:text="832.44 x 200"/>
+
+    <TextView
+        android:id="@+id/detail_ask_header"
+        android:gravity="center_vertical"
+        android:textColor="@color/material_gray_400"
+        android:textSize="@dimen/extra_detail_header_text_size"
+        android:text="@string/detail_ask_header"
+        app:layout_gravity="fill"
+        app:layout_rowWeight="1"/>
+
+    <TextView
+        android:id="@+id/detail_ask"
+        android:gravity="center_vertical"
+        style="@style/extra_detail_value_text"
+        android:textSize="@dimen/extra_detail_text_size"
+        android:padding="4dp"
+        app:layout_gravity="fill"
+        tools:text="832.44 x 200"/>
+
+    <TextView
+        android:id="@+id/detail_volume_header"
+        android:gravity="center_vertical"
+        android:textColor="@color/material_gray_400"
+        android:textSize="@dimen/extra_detail_header_text_size"
+        android:text="@string/detail_volume_header"
+        app:layout_gravity="fill"
+        app:layout_rowWeight="1"
+        />
+
+    <TextView
+        android:id="@+id/detail_volume"
+        android:gravity="center_vertical"
+        style="@style/extra_detail_value_text"
+        android:textSize="@dimen/extra_detail_text_size"
+        android:padding="4dp"
+        app:layout_gravity="fill"
+        tools:text="1000000"/>
+
+    <TextView
+        android:id="@+id/detail_avg_volume_header"
+        android:gravity="center_vertical"
+        android:textColor="@color/material_gray_400"
+        android:textSize="@dimen/extra_detail_header_text_size"
+        android:text="@string/detail_avg_volume_header"
+        app:layout_gravity="fill"
+        app:layout_rowWeight="1"
+        />
+
+    <TextView
+        android:id="@+id/detail_avg_volume"
+        style="@style/extra_detail_value_text"
+        android:textSize="@dimen/extra_detail_text_size"
+        android:padding="4dp"
+        android:gravity="center_vertical"
+        app:layout_gravity="fill"
+        tools:text="12309"/>
+
+
+</android.support.v7.widget.GridLayout>

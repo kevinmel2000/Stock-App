@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- Touch selector style -->
+    <style name="StockListStyle">
+        <item name="android:choiceMode">singleChoice</item>
+    </style>
+
+
+</resources>

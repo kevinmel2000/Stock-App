@@ -1,0 +1,88 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- App name -->
+    <string name="app_name">
+        <xliff:g id="app_title">Stock Hawk</xliff:g>
+    </string>
+
+    <!-- Key's strings -->
+    <string name="pref_stocks_initialized_key" translatable="false">initialized</string>
+    <string name="pref_stocks_key">stocks</string>
+    <string name="pref_display_mode_key">displayMode</string>
+    <string name="pref_display_mode_default">@string/pref_display_mode_percentage_key</string>
+    <string name="pref_display_mode_absolute_key">absolute</string>
+    <string name="pref_display_mode_percentage_key">percentage</string>
+    <string name="action_change_units">@string/pref_display_mode_key</string>
+
+    <!-- Default stocks -->
+    <string name="default_stocks_yahoo">
+        <xliff:g id="Yahoo_symbol">YHOO</xliff:g>
+    </string>
+    <string name="default_stocks_apple">
+        <xliff:g id="Apple_symbol">AAPL</xliff:g>
+    </string>
+    <string name="default_stocks_microsoft">
+        <xliff:g id="Microsoft_symbol">MSFT</xliff:g>
+    </string>
+    <string name="default_stocks_facebook">
+        <xliff:g id="Facebook_symbol">FB</xliff:g>
+    </string>
+
+    <!-- Dialog box strings -->
+    <string name="dialog_title">Add Stock</string>
+    <string name="dialog_plus_button">Click to add new stock</string>
+    <string name="dialog_hint">Symbol (e.g. "<xliff:g id="Google_symbol">GOOG</xliff:g>" )</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_add">Add</string>
+
+    <!-- Snack bar Error strings -->
+    <string name="error_no_network">No network connectivity! Will load stock cursor when the network is available.</string>
+    <string name="error_no_stocks">No stocks added! Hit the floating action button to add one.</string>
+
+    <string name="toast_stock_added_no_connectivity">Symbol %s added. Will refresh when network available.</string>
+    <string name="toast_no_connectivity">Will refresh when network available.</string>
+
+    <string name="stock_hawk_status_key" translatable="false">sh_status</string>
+    <string name="invalid_symbol_key" translatable="false">invalid_symbol</string>
+
+    <!-- extra_detail gridlayout headers -->
+    <string name="detail_open_header">Open:</string>
+    <string name="detail_previous_close_header">Previous Close:</string>
+    <string name="detail_day_high_header">Day High:</string>
+    <string name="detail_day_low_header">Day Low:</string>
+    <string name="detail_bid_header">Bid:</string>
+    <string name="detail_ask_header">Ask:</string>
+    <string name="detail_volume_header">Volume:</string>
+    <string name="detail_avg_volume_header">Avg Volume:</string>
+
+    <!-- Line graph descriptions -->
+    <string name="line_graph_description">Stock history line graph</string>
+    <string name="line_graph_label_description">Dates</string>
+    <string name="line_graph_inner_description">Stock History</string>
+
+
+    <!-- View content description formatter strings -->
+    <string name="dollars">dollars</string>
+    <string name="current_price_is">Current price is</string>
+    <string name="price_change_is">Price change is</string>
+    <string name="percent_change_is">Percent change is</string>
+    <string name="todays_low_price_is">Today\'s lowest price is</string>
+    <string name="today_high_price_is">Today\'s highest price is</string>
+
+    <!--&lt;!&ndash; Strings to pass data to detail fragment &ndash;&gt;-->
+    <!--<string name="symbol">symbol</string>-->
+    <!--<string name="symbol_name">symbol name</string>-->
+    <!--<string name="price">price</string>-->
+    <!--<string name="price_change">price change</string>-->
+    <!--<string name="percent_change">percent change</string>-->
+    <!--<string name="day_high">day high</string>-->
+    <!--<string name="day_low">day low</string>-->
+    <!--<string name="history">history</string>-->
+    <!--<string name="prev_close">previous close</string>-->
+    <!--<string name="open">open</string>-->
+    <!--<string name="bid">bid</string>-->
+    <!--<string name="ask">ask</string>-->
+    <!--<string name="volume">volume</string>-->
+    <!--<string name="average_volume">average volume</string>-->
+
+</resources>

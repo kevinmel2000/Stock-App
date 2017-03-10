@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="@dimen/appbar_elevation"
+        android:background="@color/colorPrimary"/>
+
+    <RelativeLayout
+        android:id="@+id/detail_symbol_layout"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/appbar_elevation"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/detail_symbol_name"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Alphabet Inc."
+            />
+
+        <TextView
+            android:id="@+id/detail_symbol"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/detail_symbol_name"
+            android:layout_toEndOf="@id/detail_symbol_name"
+            android:paddingLeft="6dp"
+            android:paddingStart="6dp"
+            tools:text="(GOOG)"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimaryLight"
+            android:layout_below="@id/detail_symbol"/>
+
+        <TextView
+            android:id="@+id/detail_price"
+            style="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/colorPrimaryLight"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_symbol_name"
+            android:paddingRight="5dp"
+            tools:text="839.90"/>
+
+        <TextView
+            android:id="@+id/detail_price_change"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/material_green_700"
+            android:textStyle=""
+            android:gravity="bottom"
+            android:layout_marginBottom="6dp"
+            android:layout_alignBottom="@id/detail_price"
+            android:layout_below="@id/detail_symbol_name"
+            android:layout_toRightOf="@id/detail_price"
+            android:layout_toEndOf="@id/detail_price"
+            android:paddingRight="5dp"
+            tools:text="+0.15"/>
+
+        <TextView
+            android:id="@+id/detail_percent_change"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/material_green_700"
+            android:gravity="bottom"
+            android:layout_marginBottom="6dp"
+            android:layout_alignBottom="@id/detail_price"
+            android:layout_below="@id/detail_symbol_name"
+            android:layout_toRightOf="@id/detail_price_change"
+            android:layout_toEndOf="@id/detail_price_change"
+            tools:text="(+0.15%)"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <include layout="@layout/extra_detail"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/line_graph"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="0dp"
+        android:background="@color/material_gray_800"/>
+
+    <RelativeLayout
+        android:id="@+id/detail_symbol_layout"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/material_gray_800">
+
+        <TextView
+            android:id="@+id/detail_symbol_name"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Alphabet Inc."
+            />
+
+        <TextView
+            android:id="@+id/detail_symbol"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/detail_symbol_name"
+            android:layout_toEndOf="@id/detail_symbol_name"
+            android:paddingLeft="6dp"
+            android:paddingStart="6dp"
+            tools:text="(GOOG)"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimaryLight"
+            android:layout_below="@id/detail_symbol"/>
+
+        <TextView
+            android:id="@+id/detail_price"
+            style="@style/TextAppearance.AppCompat.Display3"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_symbol_name"
+            android:paddingRight="5dp"
+            android:paddingEnd="5dp"
+            tools:text="839.90"/>
+
+        <TextView
+            android:id="@+id/detail_price_change"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/material_green_700"
+            android:textSize="30sp"
+            android:gravity="bottom"
+            android:layout_marginBottom="6dp"
+            android:layout_alignBottom="@id/detail_price"
+            android:layout_below="@id/detail_symbol_name"
+            android:layout_toRightOf="@id/detail_price"
+            android:layout_toEndOf="@id/detail_price"
+            android:paddingRight="5dp"
+            android:paddingEnd="5dp"
+            tools:text="+0.15"/>
+
+        <TextView
+            android:id="@+id/detail_percent_change"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/material_green_700"
+            android:textSize="30sp"
+            android:gravity="bottom"
+            android:layout_marginBottom="6dp"
+            android:layout_alignBottom="@id/detail_price"
+            android:layout_below="@id/detail_symbol_name"
+            android:layout_toRightOf="@id/detail_price_change"
+            android:layout_toEndOf="@id/detail_price_change"
+            tools:text="(+0.15%)"/>
+
+        <android.support.v4.widget.Space
+            android:id="@+id/detail_center_space"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"/>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/line_graph"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/detail_percent_change"
+            android:layout_toLeftOf="@id/detail_center_space"
+            android:layout_toStartOf="@id/detail_center_space"/>
+
+        <include layout="@layout/extra_detail"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/detail_percent_change"
+            android:layout_toRightOf="@id/detail_center_space"
+            android:layout_toEndOf="@id/detail_center_space"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

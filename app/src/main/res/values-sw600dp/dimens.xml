@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- fragment detail text sizes -->
+    <dimen name="detail_title_text_size">48sp</dimen>
+    
+    
+    <!-- extra_detail text size -->
+    <dimen name="extra_detail_header_text_size">24sp</dimen>
+    <dimen name="extra_detail_text_size">24sp</dimen>
+
+</resources>
