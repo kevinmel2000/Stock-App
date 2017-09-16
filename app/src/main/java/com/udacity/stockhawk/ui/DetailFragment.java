@@ -30,6 +30,7 @@ import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 import static com.udacity.stockhawk.data.Contract.Quote;
 
@@ -63,6 +64,7 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
     @BindView(R.id.line_graph)LineChart vLineChart;
 
     private Uri mSelectedUri;
+    private Unbinder unbinder;
 
     public DetailFragment(){}
 
@@ -70,7 +72,7 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_detail,container,false);
-        ButterKnife.bind(this,view);
+        unbinder = ButterKnife.bind(this, view);
 
         Bundle arguments = getArguments();
         if(arguments != null) {
@@ -84,6 +86,12 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
     public void onActivityCreated(Bundle savedInstanceState){
         getLoaderManager().initLoader(DETAIL_LOADER,null,this);
         super.onActivityCreated(savedInstanceState);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 
     @Override

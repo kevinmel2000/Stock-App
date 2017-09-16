@@ -33,6 +33,7 @@ import com.udacity.stockhawk.sync.Receiver;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * Created by Tony Nguyen on 2/16/2017.
@@ -60,6 +61,7 @@ public class MainFragment extends Fragment implements LoaderManager.LoaderCallba
 
     private StockAdapter adapter;
     private Uri mSelectedUri;
+    private Unbinder unbinder;
     private int mPosition = RecyclerView.NO_POSITION;
 
     public interface CallBack{
@@ -86,7 +88,7 @@ public class MainFragment extends Fragment implements LoaderManager.LoaderCallba
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_main, container, false);
-        ButterKnife.bind(this, v);
+        unbinder = ButterKnife.bind(this, v);
 
         adapter = new StockAdapter(getContext(), this);
         stockRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -146,6 +148,12 @@ public class MainFragment extends Fragment implements LoaderManager.LoaderCallba
     }
 
     @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
+
+    @Override
     public void onResume(){
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
         sp.registerOnSharedPreferenceChangeListener(this);
@@ -177,20 +185,16 @@ public class MainFragment extends Fragment implements LoaderManager.LoaderCallba
         if (!Utility.networkUp(getContext()) && adapter.getItemCount() == 0) {
             swipeRefreshLayout.setRefreshing(false);
             error.setText(getString(R.string.error_no_network));
-//            Utility.makeIndefiniteSnackBar(coordinatorLayout,getString(R.string.error_no_network));
             error.setVisibility(View.VISIBLE);
         } else if (!Utility.networkUp(getContext())) {
             swipeRefreshLayout.setRefreshing(false);
             Toast.makeText(getContext(), R.string.toast_no_connectivity, Toast.LENGTH_LONG).show();
-//            Utility.makeIndefiniteSnackBar(coordinatorLayout, getString(R.string.toast_no_connectivity));
         } else if (PrefUtils.getStocks(getContext()).size() == 0) {
             swipeRefreshLayout.setRefreshing(false);
             error.setText(getString(R.string.error_no_stocks));
-//            Utility.makeSnackBar(coordinatorLayout, getString(R.string.error_no_stocks));
             error.setVisibility(View.VISIBLE);
         } else {
             error.setVisibility(View.GONE);
-//            Utility.makeSnackBar(coordinatorLayout, "Stocks Updated!");
         }
     }
 

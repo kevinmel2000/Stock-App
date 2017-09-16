@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Build;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.widget.RemoteViews;
 
 import com.udacity.stockhawk.R;
@@ -102,8 +101,6 @@ public class WidgetIntentService extends IntentService {
                 setRemoteContentDescription(views,description);
             }
             views.setTextViewText(R.id.widget_price, price);
-
-            Log.d("SYMBOLA", symbol);
 
             Intent launchIntent = new Intent(this, MainActivity.class);
             PendingIntent pendingIntent = PendingIntent.getActivity(this,0,launchIntent,0);
