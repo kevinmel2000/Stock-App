@@ -11,6 +11,12 @@ You will productionize an app, taking it from a functional state to a production
 
 [Rubric][2]
 
+## Installation
+Clone the GitHub repository.
+```
+$ git clone https://github.com/tonynguyen0523/Stock-App.git
+```
+
 ## Why this project?
 Stock Hawk gives you an opportunity to diagnose problems and practice improving apps. These skills are vital to building apps users will love.
 
